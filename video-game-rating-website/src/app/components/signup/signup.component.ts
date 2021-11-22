@@ -5,6 +5,14 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './signup.component.html',
   styleUrls: ['./signup.component.css'],
 })
+
+/**
+ * @Description Here the necessary properties are taken for the validation 
+ * @props {String} 
+ * 
+ */
+
+
 export class SignupComponent implements OnInit {
   [x: string]: any;
   username = '';
@@ -21,7 +29,7 @@ export class SignupComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
-  validate(type: string): void {
+  validate(type: string): void {          // vadilate is used to vadilate with schema given
     const usernamePattern = /^[\w-.]*$/;
     const emailPattern = /\S+@\S+\.\S+/;
     
@@ -43,6 +51,9 @@ export class SignupComponent implements OnInit {
       }
     }
   }
+
+  // here on onkey is binding to respond to any DOM event
+
   onkey(event: any, type: string) {
     if (type === 'username') {
       this['username'] = event.target.value;
