@@ -1,12 +1,8 @@
 /**
  * importing npm required npm modules
  * importing the necessary components for Routing
- * 
+ *
  */
-
-
-
-
 
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -14,6 +10,7 @@ import { AboutComponent } from './components/about/about.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
+import { MainpageComponent } from './components/mainpage/mainpage.component';
 import { SignupComponent } from './components/signup/signup.component';
 
 const routes: Routes = [
@@ -22,10 +19,11 @@ const routes: Routes = [
   { path: 'Login', component: LoginComponent },
   { path: 'About', component: AboutComponent },
   { path: 'Forgotpassword', component: ForgotPasswordComponent },
+  { path: 'Mainpage', component: MainpageComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
