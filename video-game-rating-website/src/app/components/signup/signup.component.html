@@ -14,7 +14,7 @@
       (keyup)="onkey($event, 'username')"
     />
     <p *ngIf="!valid.username" class="error-msg">
-      Username should be greaer than 5 words
+      <small>Username should be greaer than 5 words</small>
     </p>
     <label for="email"><b>Email</b></label>
     <input
@@ -24,7 +24,7 @@
       id="email"
       (keyup)="onkey($event, 'email')"
     />
-    <p *ngIf="!valid.email" class="error-msg">Email is invalid</p>
+    <p *ngIf="!valid.email" class="error-msg"><small>Email is invalid</small></p>
 
     <label for="psw"><b>Password</b></label>
     <input
@@ -33,7 +33,7 @@
       name="psw"
       (keyup)="onkey($event, 'password')"
     />
-    <p *ngIf="!valid.password" class="error-msg">Password incorrect</p>
+    <p *ngIf="!valid.password" class="error-msg"><small>Password incorrect</small></p>
     <label for="password"><b>Confirm Password</b></label>
 
     <input
@@ -42,7 +42,7 @@
       placeholder="ConfirmPassword"
       (keyup)="onkey($event, 'ConfirmPassword')"
     />
-    <p *ngIf="!valid.password" class="error-msg">Password doesnot match!</p>
+    <p *ngIf="!valid.password" class="error-msg"><small>Password doesnot match!</small></p>
 
     <div class="clearfix">
       <button type="submit" class="btn">Sign Up</button><br />
