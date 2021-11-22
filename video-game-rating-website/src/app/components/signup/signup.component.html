@@ -1,1 +1,54 @@
-<p>signup works!</p>
+<section class="home">
+  <img src="../../assets/images/background3.jpg" />
+</section>
+
+<form>
+  <div class="container">
+    <h1>Sign Up</h1>
+
+    <label for="email"><b>Username</b></label>
+    <input
+      type="text"
+      name="username"
+      placeholder="Enter Username"
+      (keyup)="onkey($event, 'username')"
+    />
+    <p *ngIf="!valid.username" class="error-msg">
+      Username should be greaer than 5 words
+    </p>
+    <label for="email"><b>Email</b></label>
+    <input
+      type="text"
+      placeholder="Enter Email"
+      name="email"
+      id="email"
+      (keyup)="onkey($event, 'email')"
+    />
+    <p *ngIf="!valid.email" class="error-msg">Email is invalid</p>
+
+    <label for="psw"><b>Password</b></label>
+    <input
+      type="password"
+      placeholder="Enter Password"
+      name="psw"
+      (keyup)="onkey($event, 'password')"
+    />
+    <p *ngIf="!valid.password" class="error-msg">Password incorrect</p>
+    <label for="password"><b>Confirm Password</b></label>
+
+    <input
+      type="password"
+      name="ConfirmPassword"
+      placeholder="ConfirmPassword"
+      (keyup)="onkey($event, 'ConfirmPassword')"
+    />
+    <p *ngIf="!valid.password" class="error-msg">Password doesnot match!</p>
+
+    <div class="clearfix">
+      <button type="submit" class="btn">Sign Up</button><br />
+      <button class="btn btn-primary signin" routerLink="/Login">
+        Sign In
+      </button>
+    </div>
+  </div>
+</form>
