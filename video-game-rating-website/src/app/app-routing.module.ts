@@ -1,7 +1,8 @@
 /**
  * importing npm required npm modules
+ * importing npm required ng modules
  * importing the necessary components for Routing
- *
+ * 
  */
 
 import { NgModule } from '@angular/core';

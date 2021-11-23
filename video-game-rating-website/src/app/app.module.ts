@@ -1,3 +1,10 @@
+/**
+ * importing the required npm modules
+ * importing the required ng modules
+ */
+
+
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 

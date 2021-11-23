@@ -9,7 +9,7 @@
 	 color: rgb(19, 18, 18);
 }
  .container {
-	 margin: 30px;
+	 margin: 40px;
 	 width: 100%;
 	 max-width: 1000px;
 	 justify-content: center;
@@ -121,7 +121,8 @@
 }
  .product-details .controls ul {
 	 display: flex;
-	 margin: 15px 5px;
+	 margin: 15px 15px;
+	 
 }
  .product-details .color li + li {
 	 margin-left: 15px;
