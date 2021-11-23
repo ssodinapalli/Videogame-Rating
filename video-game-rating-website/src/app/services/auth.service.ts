@@ -7,24 +7,24 @@ import { catchError, tap } from 'rxjs/operators';
   providedIn: 'root',
 })
 export class AuthService {
-  apiUrl = 'http://192.168.0.5:5000/api/auth/';
+  apiUrl = 'http://192.168.0.5:5000/api/games';
 
-  constructor(private http: HttpClient) {
-    Login(data: any): Observable<any> {
-  return this.http.post<any>(this.apiUrl + 'login', data)
-    .pipe(
-      tap(_ => this.log('Login')),
-      catchError(this.handleError('Login', []))
-    )
-}
+//   constructor(private http: HttpClient) {
+//     login(data: any): Observable<any> {
+//   return this.http.post<any>(this.apiUrl + 'login', data)
+//     .pipe(
+//       tap(_ => this.log('login')),
+//       catchError(this.handleError('login', []))
+//     )
+// }
 
-Signup(data: any): Observable<any> {
-  return this.http.post<any>{(this.apiUrl + 'Signup', data)}
-    .pipe(
-      tap(_ => this.log('login')),
-      catchError(this.handleError('login', []))
-    ),
-}
+// Signup(data: any): Observable<any> {
+//   return this.http.post<any>(this.apiUrl + 'Signup', data)
+//     .pipe(
+//       tap(_ => this.log('login')),
+//       catchError(this.handleError('login', []))
+//     ),
+// }
 
 public handleError<T>(operation = 'operation', result?: T) {
   return (error: any): Observable<T> => {
@@ -46,7 +46,7 @@ private log(message: string) {
 }
     
   }
-function Login(data: any, any: any) {
+function login(data: any, any: any) {
   throw new Error('Function not implemented.');
 }
 

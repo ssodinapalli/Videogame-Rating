@@ -16,11 +16,11 @@ import { HomeComponent } from './components/home/home.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { AboutComponent } from './components/about/about.component';
 import { MainpageComponent } from './components/mainpage/mainpage.component';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { GamedetailsComponent } from './components/gamedetails/gamedetails.component';
 import { GamesComponent } from './games/games.component';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { TokenInterceptor } from './interceptors/token.interceptor';
+import { ReviewsComponent } from './components/reviews/reviews.component';
 
 
 @NgModule({
@@ -32,9 +32,9 @@ import { TokenInterceptor } from './interceptors/token.interceptor';
     ForgotPasswordComponent,
     AboutComponent,
     MainpageComponent,
-    DashboardComponent,
     GamedetailsComponent,
     GamesComponent,
+    ReviewsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [
