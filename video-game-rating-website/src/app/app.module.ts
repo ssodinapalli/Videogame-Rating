@@ -18,6 +18,10 @@ import { AboutComponent } from './components/about/about.component';
 import { MainpageComponent } from './components/mainpage/mainpage.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { GamedetailsComponent } from './components/gamedetails/gamedetails.component';
+import { GamesComponent } from './games/games.component';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { TokenInterceptor } from './interceptors/token.interceptor';
+
 
 @NgModule({
   declarations: [
@@ -29,13 +33,17 @@ import { GamedetailsComponent } from './components/gamedetails/gamedetails.compo
     AboutComponent,
     MainpageComponent,
     DashboardComponent,
-    GamedetailsComponent
+    GamedetailsComponent,
+    GamesComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptor,
+      multi: true,
+    },
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

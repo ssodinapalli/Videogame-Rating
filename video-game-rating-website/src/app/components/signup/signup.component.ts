@@ -7,12 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 
 /**
- * @Description Here the necessary properties are taken for the validation 
- * @props {String} 
- * 
+ * @Description Here the necessary properties are taken for the validation
+ * @props {String}
+ *
  */
-
-
 export class SignupComponent implements OnInit {
   [x: string]: any;
   username = '';
@@ -29,18 +27,17 @@ export class SignupComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
-  validate(type: string): void {          // vadilate is used to vadilate with schema given
+  validate(type: string): void {
+    // vadilate is used to vadilate with schema given
     const usernamePattern = /^[\w-.]*$/;
     const emailPattern = /\S+@\S+\.\S+/;
-    
+
     if (type === 'username') {
       if (this.username.length < 5) {
         this.valid.username = false;
       } else {
         this.valid.username = usernamePattern.test(this.username);
       }
-    
-    
     } else if (type === 'email') {
       this.valid.email = emailPattern.test(this.email);
     } else if (type === ('ConfirmPassword' || 'password')) {
@@ -57,15 +54,14 @@ export class SignupComponent implements OnInit {
   onkey(event: any, type: string) {
     if (type === 'username') {
       this['username'] = event.target.value;
-    } 
-     else if (type === 'email') {
+    } else if (type === 'email') {
       this.email = event.target.value;
     } else if (type === 'password') {
       this.password = event.target.value;
     } else if (type === 'ConfirmPassword') {
       this.ConfirmPassword = event.target.value;
-    } 
-    
+    }
+
     this.validate(type);
   }
 }

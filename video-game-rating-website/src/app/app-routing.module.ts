@@ -14,15 +14,30 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { MainpageComponent } from './components/mainpage/mainpage.component';
 import { SignupComponent } from './components/signup/signup.component';
+import { GamesComponent } from './games/games.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'Signup', component: SignupComponent },
-  { path: 'Login', component: LoginComponent },
+  {
+    path: 'Signup',
+    component: SignupComponent,
+    data: { title: 'Signup' },
+  },
+
+  {
+    path: 'Login',
+    component: LoginComponent,
+    data: { title: 'Login' },
+  },
   { path: 'About', component: AboutComponent },
   { path: 'Forgotpassword', component: ForgotPasswordComponent },
   { path: 'Mainpage', component: MainpageComponent },
   { path: 'Gamedetails', component: GamedetailsComponent },
+  {
+    path: 'Games',
+    component: GamesComponent,
+    data: { title: 'List of Games' },
+  },
 ];
 
 @NgModule({
