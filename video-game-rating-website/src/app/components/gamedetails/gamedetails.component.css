@@ -5,7 +5,7 @@ body {
   background-color: rgb(243, 224, 224);
   margin-top: 100px;
 
-  height: 100vh;
+  height: 90vh;
   margin: auto;
   display: flex;
   color: rgb(19, 18, 18);
@@ -52,7 +52,7 @@ a {
 }
 .product-details {
   padding: 40px;
-  background-color: white;
+  background-color: hsla(4, 100%, 90%, 0.589);
   border-radius: 0 0 20px 20px;
 }
 .product-details .title {
@@ -86,7 +86,7 @@ a {
   margin: 0;
 }
 .product-details article > p {
-  color: #bbb;
+  color: rgb(10, 25, 235);
   margin: 0.5em 0;
   font-size: 14px;
   line-height: 1.6;

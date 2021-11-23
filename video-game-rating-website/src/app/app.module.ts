@@ -21,6 +21,7 @@ import { GamesComponent } from './games/games.component';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { TokenInterceptor } from './interceptors/token.interceptor';
 import { ReviewsComponent } from './components/reviews/reviews.component';
+import { BottombarComponent } from './components/bottombar/bottombar.component';
 
 
 @NgModule({
@@ -35,6 +36,7 @@ import { ReviewsComponent } from './components/reviews/reviews.component';
     GamedetailsComponent,
     GamesComponent,
     ReviewsComponent,
+    BottombarComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [

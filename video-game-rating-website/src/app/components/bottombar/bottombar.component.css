@@ -1,0 +1,288 @@
+body {
+  font-family: system-ui;
+  background: #c0cbc0;
+  text-align: center;
+}
+
+.site-footer {
+  margin-top: 5px; /* Remove */
+  position: relative;
+  background-color: #1a1f24;
+  width: 100%;
+  bottom: 0;
+}
+
+.site-footer .container {
+  max-width: 85%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  padding-top: 20px;
+}
+
+.site-footer .container h1 {
+  font-size: 40px;
+}
+
+.site-footer .container h2 {
+  font-size: 40px;
+  float: right;
+}
+
+.site-footer .grid-container a {
+  color: #a2845c;
+  text-decoration: none;
+  font-size: 15px;
+  line-height: 16.25px;
+}
+
+.site-footer .grid-item {
+  padding: 10px;
+  color: #a2845c;
+}
+
+.site-footer .grid-container .inner-grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  text-align: left;
+}
+
+.site-footer .container hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #a2845c;
+  margin: 1px;
+  padding: 0;
+}
+
+.site-footer .container p {
+  font-size: 14px;
+  text-align: right;
+  color: #a2845c;
+  font-weight: 500;
+}
+
+.site-footer .container .logo-img {
+  width: 180px;
+  height: 140px;
+  cursor: pointer;
+}
+
+.site-footer .grid-container .grid-item .social-buttons {
+  padding-top: 20px;
+}
+
+.site-footer .grid-container .grid-item .social-buttons a {
+  display: inline-flex;
+  text-decoration: none;
+  font-size: 30px;
+  width: 60px;
+  height: 60px;
+  color: #1a1f24;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 0 8px;
+}
+
+.site-footer .grid-container .grid-item .social-buttons a i {
+  transition: 0.3s ease-in;
+}
+
+.site-footer .grid-container .grid-item .social-buttons a:hover i {
+  background: linear-gradient(45deg, #a2845c, #a2845c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: scale(1.5);
+}
+
+.circle-icon {
+  background: #a2845c;
+  padding: 12px;
+  border-radius: 50%;
+}
+
+/*------------------------------------------------------------------
+[ Screen Sizes] */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .site-footer {
+    height: 620px;
+    bottom: 0;
+  }
+
+  .site-footer .grid-container {
+    display: grid;
+    grid-template-columns: 400px;
+  }
+
+  .site-footer .grid-container .inner-grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    text-align: left;
+  }
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .site-footer {
+    height: 260px;
+    bottom: 0;
+  }
+
+  .site-footer .grid-container {
+    display: grid;
+    grid-template-columns: 350px auto 350px;
+  }
+
+  .site-footer .grid-container .inner-grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    text-align: left;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin-top: 30px;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  background: #333;
+  justify-content: flex-end;
+  align-items: flex-end;
+  min-height: 100vh;
+}
+
+.footer {
+  position: relative;
+  width: 100%;
+  background: #3586ff;
+  min-height: 100px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.social-icon,
+.menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.social-icon__item,
+.menu__item {
+  list-style: none;
+}
+
+.social-icon__link {
+  font-size: 2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+.social-icon__link:hover {
+  transform: translateY(-10px);
+}
+
+.menu__link {
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+  text-decoration: none;
+  opacity: 0.75;
+  font-weight: 300;
+}
+
+.menu__link:hover {
+  opacity: 1;
+}
+
+.footer p {
+  color: #fff;
+  margin: 15px 0 10px 0;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.wave {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url("https://i.ibb.co/wQZVxxk/wave.png");
+  background-size: 1000px 100px;
+}
+
+.wave#wave1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWaves 4s linear infinite;
+}
+
+.wave#wave2 {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animate 4s linear infinite !important;
+}
+
+.wave#wave3 {
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 15px;
+  animation: animateWaves 3s linear infinite;
+}
+
+.wave#wave4 {
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animate 3s linear infinite;
+}
+
+@keyframes animateWaves {
+  0% {
+    background-position-x: 1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position-x: -1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
