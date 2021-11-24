@@ -35,14 +35,45 @@
         <a class="nav-link" routerLink="About"><b>About</b></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="Signup"><b>Sign Up</b></a>
+        <a class="nav-link" routerLink="Mainpage"><b>Games</b></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="Login"><b>Sign In</b></a>
+        <a class="nav-link" routerLink="Reviews"><b>Reviews</b></a>
       </li>
+      
+      <div class="navbar__buttons">
+
+        <button class="btn btn-outline-primary my-2 my-sm-0" type="submit" routerLink="Login">
+        Sign in
+      </button>
+      
+      <button class="btn btn-outline-primary my-2 my-sm-0" type="submit" routerLink="Signup">
+        Sign Up
+      </button>
+		
+	</div>
+<!-- <div class="btn-group">
+  <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    Action
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">Action</a></li>
+    <li><a class="dropdown-item" href="#">Another action</a></li>
+    <li><a class="dropdown-item" href="#">Something else here</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="#">Separated link</a></li>
+  </ul>
+</div> -->
     </ul>
   </div>
 </nav>
+
+
+
+
+
+
+
 
 <router-outlet></router-outlet>
 <app-bottombar></app-bottombar>

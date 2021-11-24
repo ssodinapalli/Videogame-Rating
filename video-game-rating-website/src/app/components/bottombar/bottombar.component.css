@@ -65,7 +65,7 @@ body {
 
 .site-footer .container .logo-img {
   width: 180px;
-  height: 140px;
+  height: 170px;
   cursor: pointer;
 }
 
@@ -151,7 +151,7 @@ body {
 
 
 
-
+/* 
 
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
@@ -285,4 +285,4 @@ body {
   100% {
     background-positon-x: 0px;
   }
-}
+} */

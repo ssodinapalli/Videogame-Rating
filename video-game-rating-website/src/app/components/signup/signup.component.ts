@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 
 /**
  * @Description Here the necessary properties are taken for the validation
- * @props {String}
+ * @params {Object}
  *
  */
 export class SignupComponent implements OnInit {

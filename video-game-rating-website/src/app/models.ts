@@ -1,3 +1,11 @@
+/**
+ * @Description -In this file giving backend schema to fetch from database 
+ * this interface will be connection to backend with server
+ * 
+ */
+
+
+
 export interface Game {
     background_image: string;
     name: string;
