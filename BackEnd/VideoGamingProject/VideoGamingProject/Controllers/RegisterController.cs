@@ -11,6 +11,8 @@ namespace VideoGamingProject.Controllers
 {
     //[Route("api/[controller]")]
     //[ApiController]
+
+    //Create Register Controller for ControllerBase
     public class RegisterController : ControllerBase
     {
         private readonly IRegisterService _IregisterService;
@@ -19,6 +21,7 @@ namespace VideoGamingProject.Controllers
             _IregisterService = reg;
         }
 
+        //Provides Functionality to RegisterGames
         [HttpPost, Route("api/Register/RegisterGames")]
 
         public bool RegisterGames(Register student)
@@ -29,6 +32,8 @@ namespace VideoGamingProject.Controllers
             }
             return false;
         }
+
+        //Provides Functionality to GamesLogin
         [HttpGet, Route("api/Register/Login")]
         public bool Login(Login _login)
         {
@@ -42,16 +47,22 @@ namespace VideoGamingProject.Controllers
                 return false;
             }
         }
+
+        //Provides Functionality to ForgotPassword
         [HttpGet, Route("api/Register/ForgotPassword")]
         public string ForgotPassword(string GameName)
         {
             return _IregisterService.ForgotPassword(GameName);
         }
+
+        //Provides Functionality to Registeredallgames
         [HttpGet, Route("api/Register/GetRegisteredallGames")]
         public List<string> GetRegisteredGames()
         {
             return _IregisterService.GetRegisteredallGames();
         }
+
+        //Provides Functionality to DeleteGame
         [HttpDelete, Route("api/Register/DeleteGame")]
         public bool DeleteGame(string GameName)
         {
@@ -65,8 +76,12 @@ namespace VideoGamingProject.Controllers
                 return false;
             }
         }
+
+        //Provides Functionality to Resetpassword
         [HttpPatch, Route("api/Register/ResetPassword")]
+
         public bool ResettingPassword(ResetPasswordClass resetPassword)
+        
         {
             if (_IregisterService.ResetPassword(resetPassword))
             {
@@ -78,11 +93,13 @@ namespace VideoGamingProject.Controllers
                 return false;
             }
         }
-
+        //Provides Functionality to UpdateProfile
         [HttpPut, Route("api/Register/UpdateProfile")]
-        public bool UpdateProfile(UpdateProfile _UpdateProfileClass)
+        public bool UpdateProfile(UpdateProfile _UpdateProfile)
         {
-            if (_IregisterService.UpdateProfile(_UpdateProfileClass))
+            if (_IregisterService.UpdateProfile(_UpdateProfile))
+
+      
             {
                 return true;
             }
@@ -90,11 +107,30 @@ namespace VideoGamingProject.Controllers
             {
                 return false;
             }
+
         }
-        //[HttpGet, Route("api/Register/GetRegisteredallGames")]
-        //public List<string> Gamerating()
-        //{
-        //    return _IregisterService.Gamerating();
-        //}
+
+        //Provides Functionality to Gamerating
+        [HttpGet, Route("api/Register/Gamerating")]
+        public IEnumerable<Gamerating> Gamerating()
+        {
+            return _IregisterService.Gamerating();
+        }
+
+        //Provides Functionality to Popularity
+        [HttpGet, Route("api/Register/Popularity")]
+        public IEnumerable<Popularity> Popularity()
+        {
+            return _IregisterService.Popularity();
+        }
+
+        //Provides Functionality to GameCategory
+        [HttpGet, Route("api/Register/GameCategory")]
+        public IEnumerable<GameCategory> GamingCategory()
+        {
+            return _IregisterService.GameCategory();
+          
+
+        }
     }
 }

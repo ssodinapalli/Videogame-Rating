@@ -9,6 +9,7 @@ namespace Repository
 {
   public interface IRegisterService
     {
+        //declaring Properties
         public bool GameRegister(Register register);
         public bool GameLogin(Login _login);
         string ForgotPassword(string _GameName);
@@ -17,6 +18,9 @@ namespace Repository
         bool ResetPassword(ResetPasswordClass _resetPassword);
 
         bool UpdateProfile(UpdateProfile _UpdateProfileClass);
-      //  List<string> Gamerating();
+        public IEnumerable<GameCategory> GameCategory();
+        public IEnumerable<Gamerating> Gamerating();
+        public IEnumerable<Popularity> Popularity();
+
     }
 }
